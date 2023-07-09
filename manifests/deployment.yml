@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-boot-app
+  name: my-app
   labels:
-    app: spring-boot-app
+    app: my-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: spring-boot-app
+      app: my-app
   template:
     metadata:
       labels:
-        app: spring-boot-app
+        app: my-app
     spec:
       containers:
-      - name: spring-boot-app
+      - name: my-app
         image: chaitannyaa/java_awesome-cicd:3
         ports:
         - containerPort: 8080
