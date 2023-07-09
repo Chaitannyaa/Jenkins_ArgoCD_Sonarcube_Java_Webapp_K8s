@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('Build and Test') {
       steps {
-        sh 'ls -ltr'
         // build the project and create a JAR file
         sh 'mvn clean package'
       }
@@ -26,7 +25,6 @@ pipeline {
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "chaitannyaa/Awesome-cicd:${BUILD_NUMBER}"
-        // DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('dockerHub')
       }
       steps {
