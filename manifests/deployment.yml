@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: chaitannyaa/Awesome-cicd:replaceImageTag
+        image: chaitannyaa/java_awesome-cicd:replaceImageTag
         ports:
         - containerPort: 8080
