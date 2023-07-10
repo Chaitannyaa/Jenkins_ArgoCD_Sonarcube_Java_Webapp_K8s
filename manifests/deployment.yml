@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: chaitannyaa/java_awesome-cicd:3
+        image: chaitannyaa/java_awesome-cicd:replaceImageTag
         ports:
         - containerPort: 8080
